@@ -1,0 +1,77 @@
+- [ ] TCP可靠传输协议
+  - [ ] 连接断连过程
+  - [ ] 可靠性：包重传、累计确认
+  - [ ] 流量控制、拥塞控制
+  - [ ] TIME_WAIT等问题  
+- [ ] http超文本协议
+  - [ ] https://www.biancheng.net/http/cache.html 
+- [] 操作系统
+  - [ ] 虚拟内存管理（段页式管理、内存置换算法、缺页中断）
+  - [ ] 进程管理（进程数据结构、调度算法、进程线程、进程通信）
+  - [ ] IO模型，IO内存划分（PageCache、Buffer），零拷贝
+  - [ ] 虚拟化、容器化
+- [ ] 云原生  
+  - [ ] docker  
+    - 基础命令  
+    - docker file编写
+  - [ ] k8s  
+    - 特性
+    - 常用命令
+    - 容器编排
+- [ ]编程语言
+  - [ ] golang
+    - gin
+    - Goroutine
+    - channel
+    - context
+    http://wearygods.online/articles/2021/04/19/1618823886966.html
+  - [ ] typescript(前端)
+    - Vue3
+    - Element PLUS
+    - 语法优点（javascript）
+    - jQuery
+    - express
+  - [ ] python
+    - 装饰器
+    - django
+    - flask
+  - [ ] java
+    - flink (map,process,apply，windows)
+    - 基本语法
+- [ ] 中间件
+  - [ ] mysql
+    - [ ] ACID
+    - [ ] innodb引擎原理
+      - [ ] 索引
+      - [ ] 事务原理
+      - [ ] 内存管理
+    - [ ] sql优化，执行计划
+    - [ ] 读写分离、分库分表
+  - [ ]postgreSQL
+    - [ ] jsonb数据结构
+    - [ ] 插件支持
+  - [ ] redis
+    - [ ] 数据结构算法原理
+    - [ ] 数据快的原因、IO模型
+    - [ ] 主从模式、哨兵模式高可用原理
+    - [ ] 数据持久化
+    - [ ] 集群模式原理，Gossip、故障转移
+    - [ ] 洋葱模型
+  - [ ] elasticsearch
+    - [ ] 查询、存储过程原理
+    - [ ] 数据分片、高可用
+  - [ ] clickhouse   
+    - [ ] 列式存储原理   
+    - [ ] 物化视图  
+    - [ ] kafka支持   
+    - [ ] 常用引擎、特性   
+  - [ ] kafka  
+    - [ ] 原理、特性 （topic、group)
+- [ ] 项目   
+    - [ ]搜索  
+    - [ ]搜索数据流任务  
+    - [ ]数据中台  
+    - [ ]mongodb 数据迁移  
+    - [ ]前端vue知识  
+    - [ ]clickhouse读取kafka后清洗数据
+    - [ ]爬虫

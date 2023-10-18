@@ -9,9 +9,8 @@
 ### 容器运行时与Cgroup交互：
 - 在Linux上，cgroup用于限制分配给进程的资源。Kubernetes中的kubelet和底层容器运行时都需要对接cgroup来强制执行为Pod和容器管理资源，并为CPU、内存等资源设置请求和限制​2​。
 
-### Kata Containers架构：
-Kata Containers的架构包括与OCI运行时规范兼容的runtime，以及与Kubernetes CRI进行无缝协作的能力。Kata为kubelet创建的Pod创建QEMU/KVM虚拟机。Kata Containers的入口点是containerd-shim-kata-v2 (shimv2)，它为Kata实现了Containered Runtime V2（Shim API）。在Kata Containers中，由kata-agent生成的容器进程在虚拟机内部作为守护程序运行，kata-agent使用VIRTIO串行或VSOCK接口在虚拟机中运行ttRPC服务器，该接口由QEMU生成一个Socket文件暴露给宿主机。shimv2使用ttRPC协议与代理进程进行通信，该协议允许运行时将容器管理命令发送到代理进程，并用于在容器和管理引擎（例如CRI-O或Containerd）之间承载I/O流（stdout，stderr，stdin）​​。
-
+# 结论
+如果只是使用并不需要对*cgroup*进行特殊的配置，让运维配置好即可。
 
 
 ## refrerence
@@ -19,3 +18,4 @@ Kata Containers的架构包括与OCI运行时规范兼容的runtime，以及与K
 - [Kata Containers](https://katacontainers.io/)
 - [Infoq](https://www.infoq.cn/article/dgbkj0dwftxeusp64dk9)
 - [Kata GitHub](https://github.com/kata-containers/kata-containers)
+- [K8s-katacontainer 实践](https://zhuanlan.zhihu.com/p/109256949)

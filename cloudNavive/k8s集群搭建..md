@@ -4,8 +4,8 @@
 * [ ] 3.使用kata containerd作为runc
 
 ## 服务器选择
-* 选择centos作为服务器系统
-  * kata containerd有centos的[安装包](https://github.com/kata-containers/kata-containers/blob/main/docs/install/README.md#official-packages)
+* 选择~~centos~~ ***ubuntu***作为服务器系统
+  * ~~kata containerd有centos的[安装包](https://github.com/kata-containers/kata-containers/blob/main/docs/install/README.md#official-packages)~~
   * 集群[最小安装要求](https://github.com/kata-containers/kata-containers/blob/main/docs/install/README.md#official-packages)为**2c2G**内存，所以选择***4c8G***内存的服务器x1和***2c4G***内存的服务器x2
   * 主节点和工作节点的选择，根据从网上得到的信息，主节点一般为奇数，工作节点一般为偶数，所以选择x1为主节点，x2和x3为工作节点
   <img src="./woker.png" alt="worker" width="300" height="200">
@@ -22,7 +22,19 @@
 <img src="https://i.imgur.com/Nk9dj3o.jpg" alt="k8s" width="600" height="660">
 
 ### GO!!!
-* 服务器配置
+* 服务器配置选择
   * x1: 4c8G
   * x2: 2c4G
   * x3: 2c4G
+* 创建密钥对
+* 创建安全组
+
+
+apt-get install -y kubelet=1.28 kubeadm=1.28 kubectl=1.28
+
+
+kubeadm init \
+  --image-repository registry.aliyuncs.com/google_containers \
+  --pod-network-cidr=192.168.0.0/16 
+
+  sudo kubeadm init --pod-network-cidr=192.168.0.0/16 
